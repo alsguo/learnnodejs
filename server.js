@@ -1,23 +1,12 @@
-/*
-* @Author: Administrator
-* @Date:   2016-05-30 10:08:23
-* @Last Modified by:   Administrator
-* @Last Modified time: 2016-06-30 15:50:29
-*/
 
 'use strict';
 
-const http = require('http');
+var http = require('http');
 
-const hostname = '127.0.0.1';
-const port = 3000;
+http.createServer(function(request,response){
+	response.writeHead(200,{'Content-Type':'text/plain'});
+	response.end('Hello Node!');
+}).listen(8888);
 
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello World\n');
-});
+console.log("Server running at http://127.0.0.1:8888/")
 
-server.listen(port, hostname, () => {
-  console.log('Server running at http://%s:%s/',hostname,port);
-});

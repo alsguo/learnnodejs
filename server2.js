@@ -1,9 +1,3 @@
-/*
-* @Author: Administrator
-* @Date:   2016-06-30 15:54:28
-* @Last Modified by:   Administrator
-* @Last Modified time: 2016-06-30 15:54:30
-*/
 
 'use strict';
 
